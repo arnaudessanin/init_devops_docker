@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.min.js"></script>
+    <title>Manage people</title>
+  </head>
+  <body>
+    <div class="container-md" style="margin-top: 2%;">
+        <div class="row">
+          <div class="col-sm-8">
+            <!-- Première colonne pour le tableau -->
+            <div class="card">
+                <div class="card-header bg-warning">
+                  Base de données Persons
+                </div>
+                <div class="card-body">
+                    <p></p>
+                    <div class="table-responsive-md">
+                        <div id="errorAPI"></div>
+                        <table id="personTable" class="table table-bordered table-success table-striped-columns">
+                        <!-- Contenu du tableau sera inséré ici dynamiquement -->
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <!-- Deuxième colonne pour le formulaire -->
+            <div class="card text-bg-warning">
+                <div class="card-header bg-info">Ajouter une Personne</div>
+                <div class="card-body">
+                    <form id="personForm">
+                      <div class="form-group">
+                          <label for="nom">Nom</label>
+                          <input type="text" class="form-control" id="nom" name="nom">
+                      </div>
+                      <div class="form-group">
+                          <label for="prenom">Prénom</label>
+                          <input type="text" class="form-control" id="prenom" name="prenom">
+                      </div>
+                      <div class="form-group">
+                          <label for="age">Âge</label>
+                          <input type="text" class="form-control" id="age" name="age">
+                      </div>
+                      <div class="form-group">
+                          <label for="profession">Profession</label>
+                          <input type="text" class="form-control" id="profession" name="profession">
+                      </div>
+                      <button type="submit" class="btn btn-primary">Ajouter</button>
+                    </form>
+                </div>
+            </div>
+            <p></p>
+            <div id="alert-error"></div>
+        </div>
+    </div>  
+    <script src="./js/updateTable.js"></script>    
+  </body>
+</html>

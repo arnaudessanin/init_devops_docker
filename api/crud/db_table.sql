@@ -1,0 +1,9 @@
+CREATE DATABASE IF NOT EXISTS myapi;
+USE myapi;
+CREATE TABLE persons (
+  id INT AUTO_INCREMENT PRIMARY KEY,
+  nom VARCHAR(255) NOT NULL,
+  prenom VARCHAR(255) NOT NULL,
+  age INT,
+  profession VARCHAR(255)
+);
